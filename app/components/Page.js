@@ -12,7 +12,7 @@ import SidebarColumn from './sidebar/SidebarColumn'
 import Nav from './nav/Nav'
 
 const theme = {
-  fontFamily: `'Roboto', sans-serif`,
+  fontFamily: '"Roboto", sans-serif',
   brand: '#1DA1F2',
   branddark: '#1a91da',
   brandlight: '#d8e8f2',

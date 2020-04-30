@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const SideBarSectionHeaderContainer = styled.div`
   padding: 1rem 1.5rem;
@@ -10,11 +11,16 @@ const SideBarSectionHeaderContainer = styled.div`
   }
 `
 
-const SideBarSectionHeader = (props) => (
+const SideBarSectionHeader = ({ title, settings }) => (
   <SideBarSectionHeaderContainer>
-    <h2>{props.title}</h2>
-    {props.settings && <i className="material-icons-outlined">settings</i>}
+    <h2>{title}</h2>
+    {settings && <i className="material-icons-outlined">settings</i>}
   </SideBarSectionHeaderContainer>
 )
+
+SideBarSectionHeader.propTypes = {
+  title: PropTypes.string.isRequired,
+  settings: PropTypes.bool.isRequired,
+}
 
 export default SideBarSectionHeader

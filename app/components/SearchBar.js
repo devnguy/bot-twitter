@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
 
 const SearchbarContainer = styled.div`
@@ -31,7 +31,7 @@ const IconContainer = styled.div`
   padding: 1rem 0.5rem 1rem 1.5rem;
 `
 
-const SearchBar = (params) => {
+const SearchBar = () => {
   const [isFocused, setIsFocused] = useState(false)
   const handleFocus = () => {
     setIsFocused(!isFocused)
@@ -40,9 +40,9 @@ const SearchBar = (params) => {
   return (
     <SearchbarContainer>
       <IconContainer isFocused={isFocused}>
-        <i className="fas fa-search"></i>
+        <i className="fas fa-search" />
       </IconContainer>
-      <input placeholder="Search Twitter" onFocus={handleFocus} onBlur={handleFocus}></input>
+      <input placeholder="Search Twitter" onFocus={handleFocus} onBlur={handleFocus} />
     </SearchbarContainer>
   )
 }

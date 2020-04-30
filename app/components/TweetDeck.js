@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { ButtonMd } from '../components/Button'
-import Separator from '../components/styles/Separator'
+import { ButtonMd } from './Button'
+import Separator from './styles/Separator'
 
 const StyledTweetDeck = styled.div`
   padding-top: 5.2rem;
@@ -51,22 +51,22 @@ const TweetInputContainer = styled.div`
   justify-content: space-between;
 `
 
-const TweetDeck = (params) => (
+const TweetDeck = () => (
   <>
     <StyledTweetDeck>
       <FakeImg>
-        <img src="/images/default.jpg"></img>
+        <img src="/images/default.jpg" alt="" />
       </FakeImg>
       <TweetInputContainer>
         <TweetInput>
-          <div contentEditable>What's happening?</div>
+          <div contentEditable>What&apos;s happening?</div>
         </TweetInput>
         <ButtonPanel>
           <div>
-            <i className="far fa-image"></i>
-            <i className="far fa-file-video"></i>
-            <i className="far fa-chart-bar"></i>
-            <i className="far fa-smile"></i>
+            <i className="far fa-image" />
+            <i className="far fa-file-video" />
+            <i className="far fa-chart-bar" />
+            <i className="far fa-smile" />
           </div>
           <ButtonMd>Tweet</ButtonMd>
         </ButtonPanel>

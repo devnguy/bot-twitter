@@ -10,9 +10,9 @@ const StyledNavLogo = styled.div`
   }
 `
 
-const NavLogo = (props) => (
+const NavLogo = () => (
   <StyledNavLogo>
-    <i className="fab fa-twitter"></i>
+    <i className="fab fa-twitter" />
   </StyledNavLogo>
 )
 

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const StyledPageHeader = styled.header`
   display: flex;
@@ -21,15 +22,18 @@ const HeaderContainer = styled.div`
   border-right: 1px solid ${(props) => props.theme.lightgray};
 `
 
-const PageHeader = (props) => (
+const PageHeader = ({ title }) => (
   <HeaderContainer>
     <StyledPageHeader>
-      <h2>{props.title}</h2>
+      <h2>{title}</h2>
       <h2>
         <i className="material-icons">whatshot</i>
       </h2>
     </StyledPageHeader>
   </HeaderContainer>
 )
+PageHeader.propTypes = {
+  title: PropTypes.string.isRequired,
+}
 
 export default PageHeader

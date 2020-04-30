@@ -11,6 +11,6 @@ const ShowMoreContainer = styled.div`
   }
 `
 
-const ShowMore = (props) => <ShowMoreContainer>Show more</ShowMoreContainer>
+const ShowMore = () => <ShowMoreContainer>Show more</ShowMoreContainer>
 
 export default ShowMore

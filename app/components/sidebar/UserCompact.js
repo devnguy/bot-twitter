@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
+
 import UserProfPic from '../UserProfPic'
 import { ButtonSmLight } from '../Button'
 
@@ -44,16 +46,16 @@ const FollowButton = styled.div`
   justify-content: center;
 `
 
-const UserCompact = (props) => (
+const UserCompact = ({ name, verified, username }) => (
   <UserCompactContainer>
     <UserProfPic imgSrc="/images/default.jpg" />
     <UserInfo>
       <Usernames>
         <Name>
-          {props.name}
-          {props.verified && <i className="fas fa-check-circle"></i>}
+          {name}
+          {verified && <i className="fas fa-check-circle" />}
         </Name>
-        <Username>@{props.username}</Username>
+        <Username>@{username}</Username>
       </Usernames>
       <FollowButton>
         <ButtonSmLight>Follow</ButtonSmLight>
@@ -61,5 +63,12 @@ const UserCompact = (props) => (
     </UserInfo>
   </UserCompactContainer>
 )
+
+// These need to be changed
+UserCompact.propTypes = {
+  name: PropTypes.string.isRequired,
+  verified: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+}
 
 export default UserCompact

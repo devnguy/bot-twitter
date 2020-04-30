@@ -1,6 +1,7 @@
+import styled from 'styled-components'
+
 import NavItem from './NavItem'
 import NavLogo from './NavLogo'
-import styled from 'styled-components'
 import { ButtonLg } from '../Button'
 
 const StyledNav = styled.ul`

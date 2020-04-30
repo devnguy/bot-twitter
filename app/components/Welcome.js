@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { ButtonMd } from '../components/Button'
+import { ButtonMd } from './Button'
 
 const StyledIntro = styled.div`
   text-align: center;
@@ -21,11 +21,11 @@ const Welcome = () => (
   <StyledIntro>
     <h2>Welcome to Twitter!</h2>
     <p>
-      This is the best place to see what's happening in your world. Find some people and topics to
-      follow now.
+      This is the best place to see what&apos;s happening in your world. Find some people and topics
+      to follow now.
     </p>
     <ButtonContainer>
-      <ButtonMd>Let's go!</ButtonMd>
+      <ButtonMd>Let&apos;s go!</ButtonMd>
     </ButtonContainer>
   </StyledIntro>
 )

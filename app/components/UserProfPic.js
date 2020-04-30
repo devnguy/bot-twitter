@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const UserProfPicContainer = styled.div`
   height: 49px;
@@ -11,10 +12,18 @@ const UserProfPicContainer = styled.div`
   }
 `
 
-const UserProfPic = (props) => (
+const UserProfPic = ({ imgSrc }) => (
   <UserProfPicContainer>
-    <img src={props.imgSrc} />
+    <img src={imgSrc} alt="" />
   </UserProfPicContainer>
 )
+
+UserProfPic.propTypes = {
+  imgSrc: PropTypes.string,
+}
+
+UserProfPic.defaultProps = {
+  imgSrc: '/images/default.jpg',
+}
 
 export default UserProfPic

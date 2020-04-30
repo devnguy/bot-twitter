@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const TrendContainer = styled.div`
   display: flex;
@@ -26,17 +27,24 @@ const Metrics = styled.div`
   padding-top: 0.3rem;
 `
 
-const Trend = (props) => {
+const Trend = ({ category, subject, metrics }) => {
   return (
     <TrendContainer>
       <Category>
-        <div>{props.category} · Trending</div>
-        <i className="fas fa-chevron-down"></i>
+        <div>{category}· Trending</div>
+        <i className="fas fa-chevron-down" />
       </Category>
-      <Subject>{props.subject}</Subject>
-      <Metrics>{props.metrics}</Metrics>
+      <Subject>{subject}</Subject>
+      <Metrics>{metrics}</Metrics>
     </TrendContainer>
   )
+}
+
+// These will need to be changed from string to correct types
+Trend.propTypes = {
+  category: PropTypes.string.isRequired,
+  subject: PropTypes.string.isRequired,
+  metrics: PropTypes.string.isRequired,
 }
 
 export default Trend

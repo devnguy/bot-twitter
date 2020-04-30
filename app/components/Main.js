@@ -1,5 +1,7 @@
 import styled from 'styled-components'
-import Container from './styles/Container'
+import PropTypes from 'prop-types'
+
+// import Container from './styles/Container'
 
 const StyledMain = styled.main`
   border-right: 1px solid ${(props) => props.theme.lightgray};
@@ -8,11 +10,15 @@ const StyledMain = styled.main`
   height: 2000px;
 `
 
-const Main = (props) => (
+const Main = ({ children }) => (
   <StyledMain>
     {/* <Container>{props.children}</Container> */}
-    {props.children}
+    {children}
   </StyledMain>
 )
+
+Main.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
 export default Main

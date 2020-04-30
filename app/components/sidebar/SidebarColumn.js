@@ -12,13 +12,14 @@ const SearchContainer = styled.div`
 `
 const FooterContainer = styled.div``
 
-const SidebarColumn = (props) => (
+const SidebarColumn = () => (
   <SidebarContainer>
     <SearchContainer>
       <SearchBar />
     </SearchContainer>
     <Trends />
     <WhoToFollow />
+    <FooterContainer />
   </SidebarContainer>
 )
 

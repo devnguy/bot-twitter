@@ -1,5 +1,7 @@
-import Link from './Link'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
+
+import Link from './Link'
 
 const StyledNavItem = styled.li`
   height: 6rem;
@@ -21,17 +23,24 @@ const StyledNavIcon = styled.div`
   width: 1.9rem;
 `
 
-const NavItem = (props) => (
+const NavItem = ({ route, iconStyle, icon, pageName }) => (
   <StyledNavItem>
-    <Link href={props.route}>
+    <Link href={route}>
       <HoverableContainer>
         <StyledNavIcon>
-          <i className={`fa${props.iconStyle} fa-${props.icon}`}></i>
+          <i className={`fa${iconStyle} fa-${icon}`} />
         </StyledNavIcon>
-        <div>{props.pageName}</div>
+        <div>{pageName}</div>
       </HoverableContainer>
     </Link>
   </StyledNavItem>
 )
+
+NavItem.propTypes = {
+  route: PropTypes.string.isRequired,
+  iconStyle: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  pageName: PropTypes.string.isRequired,
+}
 
 export default NavItem

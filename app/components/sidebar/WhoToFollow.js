@@ -10,7 +10,7 @@ const WhoToFollowContainer = styled.div`
   margin-bottom: 1.5rem;
 `
 
-const WhoToFollow = (props) => (
+const WhoToFollow = () => (
   <WhoToFollowContainer>
     <SideBarSectionHeader title="Who to follow" />
     <UserCompact name="Barack Obama" username="BarackObama" verified="true" />
