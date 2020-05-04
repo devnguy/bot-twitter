@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 
 import Meta from './Meta'
 import { FlexContainer } from './styles/Container'
-import SidebarColumn from './sidebar/SidebarColumn'
+import SidebarColumn from './SideBarColumn'
 import Nav from './Nav'
 
 const theme = {

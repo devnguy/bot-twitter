@@ -1,4 +1,4 @@
-import ShowMoreWrapper from './style'
+import { ShowMoreWrapper } from './style'
 
 const ShowMore = () => <ShowMoreWrapper>Show more</ShowMoreWrapper>
 

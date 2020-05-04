@@ -1,4 +1,4 @@
-import TrendListWrapper from './style'
+import { TrendListWrapper } from './style'
 import Trend from './Trend'
 import { SectionHeader, ShowMore } from '../SideBarSection'
 
