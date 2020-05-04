@@ -1,7 +1,7 @@
 import { ColumnWrapper, SearchWrapper, FooterWrapper } from './style'
 import SearchBar from '../SearchBar'
 import TrendList from '../TrendList'
-import WhoToFollow from './WhoToFollow'
+import WhoToFollow from '../WhoToFollow'
 
 const SidebarColumn = () => (
   <ColumnWrapper>
