@@ -12,7 +12,7 @@ const TrendsContainer = styled.div`
 
 const Trends = () => (
   <TrendsContainer>
-    <SideBarSectionHeader title="Trends for you" settings="true" />
+    <SideBarSectionHeader title="Trends for you" settings />
     <Trend category="Pop" subject="Doja & Nicki" metrics="65.5K Tweets" />
     <Trend category="Alternative" subject="Linkin Park" metrics="14.3K Tweets" />
     <Trend category="Politics" subject="Jared Kushner" metrics="62.6K Tweets" />

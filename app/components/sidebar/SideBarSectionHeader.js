@@ -20,7 +20,10 @@ const SideBarSectionHeader = ({ title, settings }) => (
 
 SideBarSectionHeader.propTypes = {
   title: PropTypes.string.isRequired,
-  settings: PropTypes.bool.isRequired,
+  settings: PropTypes.bool,
+}
+SideBarSectionHeader.defaultProps = {
+  settings: false,
 }
 
 export default SideBarSectionHeader

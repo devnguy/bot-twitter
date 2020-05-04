@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 import UserProfPic from '../UserProfPic'
-import { ButtonSmLight } from '../Button'
+import { ButtonSmOutline } from '../Button'
 
 const UserCompactContainer = styled.div`
   display: flex;
@@ -58,7 +58,7 @@ const UserCompact = ({ name, verified, username }) => (
         <Username>@{username}</Username>
       </Usernames>
       <FollowButton>
-        <ButtonSmLight>Follow</ButtonSmLight>
+        <ButtonSmOutline>Follow</ButtonSmOutline>
       </FollowButton>
     </UserInfo>
   </UserCompactContainer>

@@ -21,6 +21,10 @@
     "react/jsx-filename-extension": [0],
     "react/react-in-jsx-scope": "off",
     "react/jsx-one-expression-per-line": "off",
-    "react/prefer-stateless-function": "off"
+    "react/prefer-stateless-function": "off",
+    "react/no-unescaped-entities": "off",
+    "no-unused-vars": "off",
+    "object-curly-spacing": "warn",
+    "object-curly-newline": "off"
   }
 }

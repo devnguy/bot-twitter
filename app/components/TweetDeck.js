@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { ButtonMd } from './Button'
+import { Button } from './Button'
 import Separator from './styles/Separator'
 
 const StyledTweetDeck = styled.div`
@@ -68,7 +68,7 @@ const TweetDeck = () => (
             <i className="far fa-chart-bar" />
             <i className="far fa-smile" />
           </div>
-          <ButtonMd>Tweet</ButtonMd>
+          <Button>Tweet</Button>
         </ButtonPanel>
       </TweetInputContainer>
     </StyledTweetDeck>
