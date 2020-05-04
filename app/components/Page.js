@@ -6,16 +6,19 @@
 
 import React, { Component } from 'react'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
+import PropTypes from 'prop-types'
+
 import Meta from './Meta'
 import { FlexContainer } from './styles/Container'
 import SidebarColumn from './sidebar/SidebarColumn'
-import Nav from './nav/Nav'
+import Nav from './Nav'
 
 const theme = {
   fontFamily: '"Roboto", sans-serif',
   brand: '#1DA1F2',
   branddark: '#1a91da',
   brandlight: '#d8e8f2',
+  brandlighter: '#e8f5fe',
   black: '#000000',
   lightgray: '#E6ECF0',
   white: '#FFFFFF',
@@ -66,18 +69,23 @@ const GlobalStyle = createGlobalStyle`
 
 class Page extends Component {
   render() {
+    const { children } = this.props
     return (
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Meta />
         <FlexContainer>
           <Nav />
-          {this.props.children}
+          {children}
           <SidebarColumn />
         </FlexContainer>
       </ThemeProvider>
     )
   }
+}
+
+Page.propTypes = {
+  children: PropTypes.node.isRequired,
 }
 
 export default Page

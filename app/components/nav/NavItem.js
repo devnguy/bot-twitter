@@ -1,39 +1,19 @@
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
+import * as Styled from './style'
 import Link from './Link'
 
-const StyledNavItem = styled.li`
-  height: 6rem;
-  padding: 0.7rem 0;
-`
-
-const HoverableContainer = styled.a`
-  padding: 1rem;
-  display: flex;
-  color: ${(props) => props.theme.black};
-  :hover {
-    text-decoration: none;
-  }
-`
-
-const StyledNavIcon = styled.div`
-  text-align: center;
-  margin: 0 1rem;
-  width: 1.9rem;
-`
-
 const NavItem = ({ route, iconStyle, icon, pageName }) => (
-  <StyledNavItem>
+  <Styled.NavItem>
     <Link href={route}>
-      <HoverableContainer>
-        <StyledNavIcon>
+      <Styled.A>
+        <Styled.NavIcon>
           <i className={`fa${iconStyle} fa-${icon}`} />
-        </StyledNavIcon>
+        </Styled.NavIcon>
         <div>{pageName}</div>
-      </HoverableContainer>
+      </Styled.A>
     </Link>
-  </StyledNavItem>
+  </Styled.NavItem>
 )
 
 NavItem.propTypes = {

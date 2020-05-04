@@ -1,20 +1,10 @@
-import styled from 'styled-components'
-
+import * as Styled from './style'
 import NavItem from './NavItem'
 import NavLogo from './NavLogo'
 import { ButtonLg } from '../Button'
 
-const StyledNav = styled.ul`
-  padding: 0 2rem;
-  list-style: none;
-  font-size: 1.9rem;
-  font-weight: 700;
-  width: 275px;
-  margin: 0;
-`
-
 const Nav = () => (
-  <StyledNav>
+  <Styled.Nav>
     <NavLogo />
     <NavItem route="/" pageName="Home" icon="home" iconStyle="s" />
     <NavItem route="/explore" pageName="Explore" icon="hashtag" iconStyle="s" />
@@ -25,7 +15,7 @@ const Nav = () => (
     <NavItem route="/profile" pageName="Profile" icon="user" iconStyle="r" />
     <NavItem route="/more" pageName="More" icon="ellipsis-h" iconStyle="s" />
     <ButtonLg>Tweet</ButtonLg>
-  </StyledNav>
+  </Styled.Nav>
 )
 
 export default Nav

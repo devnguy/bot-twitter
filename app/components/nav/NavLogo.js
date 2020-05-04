@@ -1,19 +1,9 @@
-import styled from 'styled-components'
-
-const StyledNavLogo = styled.div`
-  height: 5.4rem;
-  padding: 0 1rem;
-  font-size: 2.8rem;
-  color: ${(props) => props.theme.brand};
-  i {
-    padding: 1rem;
-  }
-`
+import * as Styled from './style'
 
 const NavLogo = () => (
-  <StyledNavLogo>
+  <Styled.NavLogo>
     <i className="fab fa-twitter" />
-  </StyledNavLogo>
+  </Styled.NavLogo>
 )
 
 export default NavLogo
