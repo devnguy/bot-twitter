@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 
 import { Wrapper, UserInfo, Usernames, Name, Username, FollowButton } from './style'
-import UserProfPic from '../UserProfPic'
+import UserAvatar from '../UserAvatar'
 import { ButtonSmOutline } from '../Button'
 
 const UserItem = ({ name, verified, username }) => (
   <Wrapper>
-    <UserProfPic imgSrc="/images/default.jpg" />
+    <UserAvatar imgSrc="/images/default.jpg" />
     <UserInfo>
       <Usernames>
         <Name>
