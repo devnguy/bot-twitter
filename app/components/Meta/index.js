@@ -1,5 +1,4 @@
 /* Head element for each page. */
-
 import Head from 'next/head'
 
 const Meta = () => (

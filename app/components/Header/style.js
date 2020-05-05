@@ -1,7 +1,6 @@
 import styled from 'styled-components'
-import PropTypes from 'prop-types'
 
-const StyledPageHeader = styled.header`
+export const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid ${(props) => props.theme.lightgray};
@@ -16,24 +15,8 @@ const StyledPageHeader = styled.header`
   }
 `
 
-const HeaderContainer = styled.div`
+export const FixedWrapper = styled.div`
   position: fixed;
   width: ${(props) => props.theme.maxWidthTimeline};
   border-right: 1px solid ${(props) => props.theme.lightgray};
 `
-
-const PageHeader = ({ title }) => (
-  <HeaderContainer>
-    <StyledPageHeader>
-      <h2>{title}</h2>
-      <h2>
-        <i className="material-icons">whatshot</i>
-      </h2>
-    </StyledPageHeader>
-  </HeaderContainer>
-)
-PageHeader.propTypes = {
-  title: PropTypes.string.isRequired,
-}
-
-export default PageHeader

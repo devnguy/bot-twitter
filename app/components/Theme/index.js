@@ -1,17 +1,4 @@
-/**
- * Top level component of each page. This component renders the Meta
- * component, Header, and provides global styles and themes to its
- * children.
- */
-
-import React, { Component } from 'react'
-import { ThemeProvider, createGlobalStyle } from 'styled-components'
-import PropTypes from 'prop-types'
-
-import Meta from './Meta'
-import { FlexContainer } from './styles/Container'
-import SidebarColumn from './SideBarColumn'
-import Nav from './Nav'
+import { createGlobalStyle } from 'styled-components'
 
 const theme = {
   fontFamily: '"Roboto", sans-serif',
@@ -32,7 +19,7 @@ const theme = {
   timelinePadding: '15px',
 }
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: 10px;
@@ -67,25 +54,4 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-class Page extends Component {
-  render() {
-    const { children } = this.props
-    return (
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Meta />
-        <FlexContainer>
-          <Nav />
-          {children}
-          <SidebarColumn />
-        </FlexContainer>
-      </ThemeProvider>
-    )
-  }
-}
-
-Page.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Page
+export default theme
