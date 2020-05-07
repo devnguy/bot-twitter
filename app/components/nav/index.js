@@ -1,7 +1,7 @@
 import * as Styled from './style'
 import NavItem from './NavItem'
 import NavLogo from './NavLogo'
-import { ButtonLg } from '../Button'
+import Button from '../Button'
 
 const Nav = () => (
   <Styled.Nav>
@@ -14,7 +14,7 @@ const Nav = () => (
     <NavItem route="/lists" pageName="Lists" icon="list-alt" iconStyle="r" />
     <NavItem route="/profile" pageName="Profile" icon="user" iconStyle="r" />
     <NavItem route="/more" pageName="More" icon="ellipsis-h" iconStyle="s" />
-    <ButtonLg>Tweet</ButtonLg>
+    <Button large>Tweet</Button>
   </Styled.Nav>
 )
 

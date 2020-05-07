@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 
 import { Wrapper, UserInfo, Usernames, Name, Username, FollowButton } from './style'
 import UserAvatar from '../UserAvatar'
-import { ButtonSmOutline } from '../Button'
+import Button from '../Button'
 
 const UserItem = ({ name, verified, username }) => (
   <Wrapper>
@@ -16,7 +16,9 @@ const UserItem = ({ name, verified, username }) => (
         <Username>@{username}</Username>
       </Usernames>
       <FollowButton>
-        <ButtonSmOutline>Follow</ButtonSmOutline>
+        <Button small outline>
+          Follow
+        </Button>
       </FollowButton>
     </UserInfo>
   </Wrapper>

@@ -1,4 +1,4 @@
-import { Button } from '../Button'
+import Button from '../Button'
 import UserAvatar from '../UserAvatar'
 import Separator from '../styles/Separator'
 import { Wrapper, TweetInput, ButtonPanel, TweetInputWrapper } from './style'

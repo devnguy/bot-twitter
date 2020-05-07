@@ -1,4 +1,4 @@
-import { Button } from '../Button'
+import Button from '../Button'
 import { Wrapper, ButtonWrapper } from './style'
 
 const Welcome = () => (
